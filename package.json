@@ -1,0 +1,60 @@
+{
+  "name": "@ocelotjungle/case-converters",
+  "version": "1.0.0",
+  "description": "Tools to switch name's casings",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "presets": [
+        "dist/presets/index.d.ts"
+      ],
+      "*": [
+        "dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./presets": {
+      "types": "./dist/presets/index.d.ts",
+      "import": "./dist/presets/index.mjs",
+      "require": "./dist/presets/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OcelotJungle/case-converters"
+  },
+  "author": "OcelotJungle",
+  "license": "MIT",
+  "keywords": [
+    "utility",
+    "case"
+  ],
+  "devDependencies": {
+    "@tsconfig/strictest": "^2.0.3",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.28",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "tsup": "^7.2.0",
+    "typescript": "^5.4.2"
+  }
+}
